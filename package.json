@@ -1,0 +1,47 @@
+{
+  "displayName": "Homebridge for HTTP based Sensors",
+  "name": "homebridge-awesome-http-sensor",
+  "version": "1.0.6",
+  "description": "Flexible bridge for http based door/window sensors",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andreasgruener/homebridge-awesome-http-sensor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aandreasgruener/homebridge-awesome-http-sensor/issues"
+  },
+  "engines": {
+    "node": ">=10.17.0",
+    "homebridge": ">=1.0.0"
+  },
+  "main": "dist/platform.js",
+  "scripts": {
+    "lint": "eslint src/**.ts --max-warnings=0",
+    "watch": "npm run build && npm link && nodemon",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "dependencies": {
+    "cache-service-cache-module": "^2.0.1",
+    "superagent": "^6.1.0",
+    "superagent-cache-plugin": "^3.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.11.0",
+    "cache-service-cache-module": "^1.2.4",
+    "eslint": "^7.13.0",
+    "homebridge": "^1.2.3",
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2",
+    "superagent": "^3.3.1",
+    "superagent-cache-plugin": "^1.0.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}

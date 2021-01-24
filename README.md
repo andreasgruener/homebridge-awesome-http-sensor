@@ -8,15 +8,14 @@
 
 # Homebridge Plugin for HTTP based lights and switches
 
-This is a Homebridge platform plugin and can be used to incorporate HTTP based lights and switches. The plugin supports any number of switches.
+This is a Homebridge platform plugin and can be used to incorporate HTTP based sensors for doors/windows. The plugin supports any number of sensors.
 It features easy configuration.
 
 ## Configuration
 
-The plugin assumes that your lights and switches exposes three URLs:
+The plugin assumes that your sensor exposes three URLs:
 - Status - this url returns the status of your light or switch
-- Turn light on - this url turns your light on 
-- Turn light off
+
 
 # Getting started
 
@@ -30,8 +29,6 @@ The plugin assumes that your lights and switches exposes three URLs:
 8. HTTP Content Type - application/text or application/json or quite common
 9. Status URL - add the status URL - be aware that the status URL is prepended with the base url from above
 9a. what the heck is a base url - you may safely ignore it (leave it empty) the status url alone is enough
-10. add the turn on url - see 9 and 9a
-11. add the turn off url - see 9 and 9a
 12. click save
 13. since we use a static platform, you need to restart homebridge (top right corner)
 13. head over to the accessories pages
@@ -47,8 +44,6 @@ I use it to control the 5 lights of the crib my daughter built.
 The lights are controlled by an ESP8266 with a WebServer running on it.
 The ESP8266 exposes an rest like  API, for each of the lights.
 E.g. for the fire in front of the crib
-- Status - http://crib.local/fire/left
-- Turn On - http://crib.local/fire/left/on
-- Turn Off - http://crib.local/fire/left/off
+- Status - http://window.local/bathroom
 
 Pictures coming soon...
